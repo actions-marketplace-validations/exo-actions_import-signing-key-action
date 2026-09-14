@@ -34,19 +34,20 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/addressparser": "^1.0.3",
-    "@types/node": "^26.2.0",
+    "@types/node": "^26.4.0",
     "@typescript-eslint/eslint-plugin": "^8.68.0",
-    "@typescript-eslint/parser": "^8.68.0",
-    "@vitest/coverage-v8": "^4.1.10",
+    "@typescript-eslint/parser": "^8.70.0",
+    "@vitest/coverage-v8": "^5.0.0",
     "@vitest/eslint-plugin": "^1.6.27",
     "esbuild": "^0.28.2",
-    "eslint": "^10.8.1",
+    "eslint": "^10.9.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.6",
     "generate-license-file": "^4.2.5",
     "globals": "^17.11.0",
     "prettier": "^3.9.6",
     "typescript": "^5.9.3",
-    "vitest": "^4.1.10"
+    "vite": "^8.2.1",
+    "vitest": "^5.0.0"
   }
 }

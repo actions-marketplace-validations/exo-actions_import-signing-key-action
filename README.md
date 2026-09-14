@@ -25,6 +25,7 @@ ___
 * [Customizing](#customizing)
   * [inputs](#inputs)
   * [outputs](#outputs)
+* [How to build](#how-to-build)
 * [Contributing](#contributing)
 * [License](#license)
 
@@ -238,6 +239,32 @@ The following outputs are available:
 | `keyid`       | String | Low 64 bits of the X.509 certificate SHA-1 fingerprint (GPG only, empty for SSH)                                                  |
 | `name`        | String | Name associated with the key                                                                                                      |
 | `email`       | String | Email address associated with the key                                                                                             |
+
+## How to build
+
+This action is written in TypeScript and bundled with [esbuild](https://esbuild.github.io/)
+into `dist/index.cjs`, which is what actually runs on the runner. The
+package manager is [Yarn](https://yarnpkg.com/) (via [Corepack](https://nodejs.org/api/corepack.html)).
+
+```shell
+# Install dependencies
+corepack yarn install
+
+# Lint
+corepack yarn run lint
+
+# Run tests (add --coverage for a coverage report)
+corepack yarn run test
+
+# Bundle src/main.ts into dist/index.cjs
+corepack yarn run build
+
+# Run lint + tests + build
+corepack yarn run all
+```
+
+`dist/index.cjs` must be committed, since GitHub Actions runs the bundled
+file directly rather than building it on the fly.
 
 ## Contributing
 
